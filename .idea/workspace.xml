@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7522734b-4a9d-4922-a056-ccc36436e7d7" name="Changes" comment="Created BotInitializer">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pro/sky/sheltertelegrambot/entity/AnimalShelter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pro/sky/sheltertelegrambot/entity/TypeAnimal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pro/sky/sheltertelegrambot/exeption/IncorrectDataException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pro/sky/sheltertelegrambot/repository/AnimalShelterRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pro/sky/sheltertelegrambot/services/ShelterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pro/sky/sheltertelegrambot/services/ShelterServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pro/sky/sheltertelegrambot/services/ShelterServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pro/sky/sheltertelegrambot/test_data/TestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pro/sky/sheltertelegrambot/services/TelegramBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pro/sky/sheltertelegrambot/services/TelegramBot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/liquibase/changelog-master.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/liquibase/scripts/shelter.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/liquibase/scripts/shelter.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +27,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -50,7 +60,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature-Valery-1",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "feature-Vyacheslav-1",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
@@ -59,10 +71,18 @@
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="pro.sky.sheltertelegrambot.services" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ShelterServiceImplTest">
     <configuration name="ShelterTelegramBotApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pro.sky.sheltertelegrambot.ShelterTelegramBotApplication" />
-      <module name="telegram-bot" />
+      <module name="shelter-telegram-bot" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="pro.sky.sheltertelegrambot.*" />
@@ -73,8 +93,75 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShelterServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shelter-telegram-bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pro.sky.sheltertelegrambot.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pro.sky.sheltertelegrambot.services" />
+      <option name="MAIN_CLASS_NAME" value="pro.sky.sheltertelegrambot.services.ShelterServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShelterServiceImplTest.receiveGeneralInformation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shelter-telegram-bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pro.sky.sheltertelegrambot.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pro.sky.sheltertelegrambot.services" />
+      <option name="MAIN_CLASS_NAME" value="pro.sky.sheltertelegrambot.services.ShelterServiceImplTest" />
+      <option name="METHOD_NAME" value="receiveGeneralInformation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShelterServiceImplTest.receiveGeneralInformation_correct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shelter-telegram-bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pro.sky.sheltertelegrambot.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pro.sky.sheltertelegrambot.services" />
+      <option name="MAIN_CLASS_NAME" value="pro.sky.sheltertelegrambot.services.ShelterServiceImplTest" />
+      <option name="METHOD_NAME" value="receiveGeneralInformation_correct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShelterServiceImplTest.receiveGeneralInformation_incorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shelter-telegram-bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pro.sky.sheltertelegrambot.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pro.sky.sheltertelegrambot.services" />
+      <option name="MAIN_CLASS_NAME" value="pro.sky.sheltertelegrambot.services.ShelterServiceImplTest" />
+      <option name="METHOD_NAME" value="receiveGeneralInformation_incorrect" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ShelterServiceImplTest" />
+        <item itemvalue="JUnit.ShelterServiceImplTest.receiveGeneralInformation_correct" />
+        <item itemvalue="JUnit.ShelterServiceImplTest.receiveGeneralInformation_incorrect" />
+        <item itemvalue="JUnit.ShelterServiceImplTest.receiveGeneralInformation" />
         <item itemvalue="Application.ShelterTelegramBotApplication" />
       </list>
     </recent_temporary>
