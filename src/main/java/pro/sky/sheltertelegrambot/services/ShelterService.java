@@ -1,5 +1,8 @@
 package pro.sky.sheltertelegrambot.services;
 
+/**
+ * Сервис для работы с данными о приюте в репозитории
+ */
 public interface ShelterService {
     /**
      * метод возвращает String с информацией о приюте

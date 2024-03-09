@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7522734b-4a9d-4922-a056-ccc36436e7d7" name="Changes" comment="Created BotInitializer">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/sky/sheltertelegrambot/entity/AnimalShelter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/sky/sheltertelegrambot/entity/TypeAnimal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/sky/sheltertelegrambot/exeption/IncorrectDataException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/sky/sheltertelegrambot/repository/AnimalShelterRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/sky/sheltertelegrambot/services/ShelterService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/sky/sheltertelegrambot/services/ShelterServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pro/sky/sheltertelegrambot/services/ShelterServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pro/sky/sheltertelegrambot/test_data/TestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7522734b-4a9d-4922-a056-ccc36436e7d7" name="Changes" comment="удалил данные из application.properties">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pro/sky/sheltertelegrambot/services/ShelterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pro/sky/sheltertelegrambot/services/ShelterServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/liquibase/scripts/shelter.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/liquibase/scripts/shelter.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pro/sky/sheltertelegrambot/services/ShelterServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pro/sky/sheltertelegrambot/services/ShelterServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +57,7 @@
     "git-widget-placeholder": "feature-Vyacheslav-1",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/papich/IdeaProjects/ShelterTelegramBot/src/test/resources",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -72,6 +65,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\papich\IdeaProjects\ShelterTelegramBot\src\test\resources" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -79,20 +75,7 @@
       <recent name="pro.sky.sheltertelegrambot.services" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ShelterServiceImplTest">
-    <configuration name="ShelterTelegramBotApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pro.sky.sheltertelegrambot.ShelterTelegramBotApplication" />
-      <module name="shelter-telegram-bot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pro.sky.sheltertelegrambot.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ShelterServiceImplTest.receiveGeneralInformation_incorrect">
     <configuration name="ShelterServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shelter-telegram-bot" />
       <extension name="coverage">
@@ -108,7 +91,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShelterServiceImplTest.receiveGeneralInformation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShelterServiceImplTest.addShelter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shelter-telegram-bot" />
       <extension name="coverage">
         <pattern>
@@ -118,7 +101,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="pro.sky.sheltertelegrambot.services" />
       <option name="MAIN_CLASS_NAME" value="pro.sky.sheltertelegrambot.services.ShelterServiceImplTest" />
-      <option name="METHOD_NAME" value="receiveGeneralInformation" />
+      <option name="METHOD_NAME" value="addShelter" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,13 +139,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestTest.proverka" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shelter-telegram-bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pro.sky.sheltertelegrambot.test_data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pro.sky.sheltertelegrambot.test_data" />
+      <option name="MAIN_CLASS_NAME" value="pro.sky.sheltertelegrambot.test_data.TestTest" />
+      <option name="METHOD_NAME" value="proverka" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ShelterServiceImplTest" />
-        <item itemvalue="JUnit.ShelterServiceImplTest.receiveGeneralInformation_correct" />
         <item itemvalue="JUnit.ShelterServiceImplTest.receiveGeneralInformation_incorrect" />
-        <item itemvalue="JUnit.ShelterServiceImplTest.receiveGeneralInformation" />
-        <item itemvalue="Application.ShelterTelegramBotApplication" />
+        <item itemvalue="JUnit.TestTest.proverka" />
+        <item itemvalue="JUnit.ShelterServiceImplTest" />
+        <item itemvalue="JUnit.ShelterServiceImplTest.addShelter" />
+        <item itemvalue="JUnit.ShelterServiceImplTest.receiveGeneralInformation_correct" />
       </list>
     </recent_temporary>
   </component>
@@ -222,7 +221,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709879877956</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Сделал объект Приют, репозиторий и сервис&#10;В сервисе методы возвращают в виде String информацию о приюте">
+      <option name="closed" value="true" />
+      <created>1709914287114</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709914287114</updated>
+    </task>
+    <task id="LOCAL-00007" summary="удалил данные из application.properties">
+      <option name="closed" value="true" />
+      <created>1709978041529</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709978041529</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -241,6 +256,8 @@
     <MESSAGE value="Created Readme.md" />
     <MESSAGE value="Created BotConfig" />
     <MESSAGE value="Created BotInitializer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created BotInitializer" />
+    <MESSAGE value="Сделал объект Приют, репозиторий и сервис&#10;В сервисе методы возвращают в виде String информацию о приюте" />
+    <MESSAGE value="удалил данные из application.properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="удалил данные из application.properties" />
   </component>
 </project>

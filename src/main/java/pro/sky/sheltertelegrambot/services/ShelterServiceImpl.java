@@ -10,6 +10,10 @@ import pro.sky.sheltertelegrambot.entity.AnimalShelter;
 import pro.sky.sheltertelegrambot.exeption.IncorrectDataException;
 import pro.sky.sheltertelegrambot.repository.AnimalShelterRepository;
 
+/**
+ * Класс имплеметируется от ShelterService
+ */
+
 @Service
 @Data
 @NoArgsConstructor

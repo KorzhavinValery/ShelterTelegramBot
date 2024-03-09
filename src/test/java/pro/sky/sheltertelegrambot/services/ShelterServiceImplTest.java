@@ -6,6 +6,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import pro.sky.sheltertelegrambot.exeption.IncorrectDataException;
 import pro.sky.sheltertelegrambot.repository.AnimalShelterRepository;
 
 import java.util.Optional;
@@ -29,6 +30,13 @@ class ShelterServiceImplTest {
         assertEquals(SHELTER.getGeneralInformation(), shelterService.receiveGeneralInformation("nameShelter"));
     }
 
+    @Test
+    @DisplayName("тест метода получающего String с информацией о приюте по наименованию приюта" +
+            "  передаем несуществующее имя")
+    void receiveGeneralInformation_incorrect() {
+        when(repository.findById("")).thenReturn(null);
+        assertEquals(SHELTER.getGeneralInformation(), shelterService.receiveGeneralInformation(""));
+    }
 
     @Test
     @DisplayName("тест метода получающего String с контактной информацией о приюте по наименованию приюта" +

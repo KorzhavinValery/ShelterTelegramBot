@@ -7,23 +7,50 @@ import pro.sky.sheltertelegrambot.exeption.IncorrectDataException;
 import javax.persistence.*;
 import java.util.Objects;
 
+/**
+ * Сущность "Приют для животных"
+ */
+
 @Getter
 @EqualsAndHashCode
 @Entity
 @Table(name = "Animal_shelter")
 public class AnimalShelter {
+
+    /**
+     * Наимеование приюта, является первичным ключем в базе данных
+     */
     @Id
     @Column(name = "name_shelter")
     private String nameShelter;
 
+    /**
+     * Тип приюта по виду животных
+     */
     @Column(name = "type_animal")
     private String typeAnimal;
+
+    /**
+     * Оснавная информация о приюте
+     */
     @Column(name = "general_information")
     private String generalInformation;
+
+    /**
+     * Контактная информация (расписание работы приюта и адрес, схема проезда)
+     */
     @Column(name = "contact_information")
     private String contactInformation;
+
+    /**
+     * Контактные данные охраны для оформления пропуска на машину
+     */
     @Column(name = "ordering_a_pass")
     private String orderingAPass;
+
+    /**
+     * Общие рекомендации о технике безопасности на территории приюта
+     */
     @Column(name = "safety_rules")
     private String safetyRules;
 
