@@ -14,6 +14,12 @@ public class BotInitializer {
     @Autowired
     TelegramBot bot;
 
+    /**
+     * Метод инициализации приложения, который реагирует на событие ContextRefreshedEvent.
+     * При вызове данного метода, он создает экземпляр TelegramBotsApi, затем регистрирует бота с этим API.
+     *
+     * @throws TelegramApiException если произошла ошибка при регистрации бота.
+     */
     @EventListener({ContextRefreshedEvent.class})
     public void init() throws TelegramApiException {
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
