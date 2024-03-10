@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2d4k6F53GEn5f7BpVXNLO6KWPQk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ShelterTelegramBotApplication.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "feature-Vyacheslav-1",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/papich/IdeaProjects/ShelterTelegramBot/src/test/resources",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\papich\IdeaProjects\ShelterTelegramBot\src\test\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="pro.sky.sheltertelegrambot.services" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ShelterServiceImplTest.receiveGeneralInformation_incorrect">
+    <configuration name="ShelterServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shelter-telegram-bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pro.sky.sheltertelegrambot.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pro.sky.sheltertelegrambot.services" />
+      <option name="MAIN_CLASS_NAME" value="pro.sky.sheltertelegrambot.services.ShelterServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShelterServiceImplTest.addShelter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shelter-telegram-bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pro.sky.sheltertelegrambot.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pro.sky.sheltertelegrambot.services" />
+      <option name="MAIN_CLASS_NAME" value="pro.sky.sheltertelegrambot.services.ShelterServiceImplTest" />
+      <option name="METHOD_NAME" value="addShelter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShelterServiceImplTest.receiveGeneralInformation_correct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shelter-telegram-bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pro.sky.sheltertelegrambot.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pro.sky.sheltertelegrambot.services" />
+      <option name="MAIN_CLASS_NAME" value="pro.sky.sheltertelegrambot.services.ShelterServiceImplTest" />
+      <option name="METHOD_NAME" value="receiveGeneralInformation_correct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShelterServiceImplTest.receiveGeneralInformation_incorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shelter-telegram-bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pro.sky.sheltertelegrambot.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pro.sky.sheltertelegrambot.services" />
+      <option name="MAIN_CLASS_NAME" value="pro.sky.sheltertelegrambot.services.ShelterServiceImplTest" />
+      <option name="METHOD_NAME" value="receiveGeneralInformation_incorrect" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestTest.proverka" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shelter-telegram-bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pro.sky.sheltertelegrambot.test_data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pro.sky.sheltertelegrambot.test_data" />
+      <option name="MAIN_CLASS_NAME" value="pro.sky.sheltertelegrambot.test_data.TestTest" />
+      <option name="METHOD_NAME" value="proverka" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ShelterServiceImplTest.receiveGeneralInformation_incorrect" />
+        <item itemvalue="JUnit.TestTest.proverka" />
+        <item itemvalue="JUnit.ShelterServiceImplTest" />
+        <item itemvalue="JUnit.ShelterServiceImplTest.addShelter" />
+        <item itemvalue="JUnit.ShelterServiceImplTest.receiveGeneralInformation_correct" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7522734b-4a9d-4922-a056-ccc36436e7d7" name="Changes" comment="" />
+      <created>1709274564549</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709274564549</updated>
+    </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1709275979301</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709275979301</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Created Readme.md">
+      <option name="closed" value="true" />
+      <created>1709277128307</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709277128307</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Created Readme.md">
+      <option name="closed" value="true" />
+      <created>1709377048371</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709377048371</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Created BotConfig">
+      <option name="closed" value="true" />
+      <created>1709876967318</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709876967318</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Created BotInitializer">
+      <option name="closed" value="true" />
+      <created>1709879877956</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709879877956</updated>
+    </task>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="Created Readme.md" />
+    <MESSAGE value="Created BotConfig" />
+    <MESSAGE value="Created BotInitializer" />
+  </component>
+</project>
