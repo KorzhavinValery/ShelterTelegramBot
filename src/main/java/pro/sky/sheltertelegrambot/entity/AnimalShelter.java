@@ -2,10 +2,9 @@ package pro.sky.sheltertelegrambot.entity;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import pro.sky.sheltertelegrambot.exeption.IncorrectDataException;
+import pro.sky.sheltertelegrambot.exсeption.IncorrectDataException;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 /**
  * Сущность "Приют для животных"

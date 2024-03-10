@@ -7,7 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import pro.sky.sheltertelegrambot.entity.AnimalShelter;
-import pro.sky.sheltertelegrambot.exeption.IncorrectDataException;
+import pro.sky.sheltertelegrambot.exсeption.IncorrectDataException;
 import pro.sky.sheltertelegrambot.repository.AnimalShelterRepository;
 
 /**

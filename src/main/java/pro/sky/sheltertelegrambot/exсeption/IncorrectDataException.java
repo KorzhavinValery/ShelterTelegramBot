@@ -1,4 +1,4 @@
-package pro.sky.sheltertelegrambot.exeption;
+package pro.sky.sheltertelegrambot.exсeption;
 
 /**
  * Исключение для обработки в случае неправильных запросов
