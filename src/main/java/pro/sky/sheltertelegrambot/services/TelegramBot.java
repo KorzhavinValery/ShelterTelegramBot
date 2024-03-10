@@ -18,17 +18,27 @@ public class TelegramBot extends TelegramLongPollingBot {
     public TelegramBot(BotConfig botConfig) {
         this.botConfig = botConfig;
     }
-
+    /**
+     * Получает имя бота, которое будет использоваться при регистрации на платформе Telegram.
+     *
+     * @return Имя бота.
+     */
     @Override
     public String getBotUsername() {
         return botConfig.getBotName();
     }
-
+    /**
+     * Получает токен бота, который будет использоваться для аутентификации на платформе Telegram.
+     *
+     * @return Токен бота.
+     */
     @Override
     public String getBotToken() {
         return botConfig.getBotToken();
     }
-
+    /**
+     * Обработка сообщений от юзера
+     */
     @Override
     public void onUpdateReceived(Update update) {
         if (update.hasMessage() && update.getMessage().hasText()) {
@@ -38,6 +48,8 @@ public class TelegramBot extends TelegramLongPollingBot {
             switch (text) {
                 case "/start":
                     startCommandMessage(chatId, firstName);
+                    break;
+                case "cat":
                     break;
                 default:
                     sendMessage(chatId, "Извините, команда недоступна");
@@ -50,6 +62,12 @@ public class TelegramBot extends TelegramLongPollingBot {
         sendMessage(chatId, startMessage);
     }
 
+    /**
+     * Отправляет сообщение указанному чату с заданным текстовым сообщением.
+     *
+     * @param chatId      Идентификатор чата, куда нужно отправить сообщение.
+     * @param textToSend  Текст сообщения, который следует отправить.
+     */
     public void sendMessage(long chatId, String textToSend) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(String.valueOf(chatId));
