@@ -1,8 +1,6 @@
 package pro.sky.sheltertelegrambot.services;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -15,8 +13,6 @@ import pro.sky.sheltertelegrambot.repository.AnimalShelterRepository;
  */
 
 @Service
-@Data
-@NoArgsConstructor
 @AllArgsConstructor
 public class ShelterServiceImpl implements ShelterService {
     private AnimalShelterRepository repository;

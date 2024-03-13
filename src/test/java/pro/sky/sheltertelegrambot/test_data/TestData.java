@@ -9,4 +9,6 @@ public class TestData {
             "contactInformation",
             "orderingAPass",
             "safetyRule");
+    public static final String INCORRECT_DATA = "null";
+    public static final String EXPECTED_MESSAGE = "Приюта с таким названием нет";
 }

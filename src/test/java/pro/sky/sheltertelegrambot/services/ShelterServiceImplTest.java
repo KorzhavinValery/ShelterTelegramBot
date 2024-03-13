@@ -6,7 +6,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import pro.sky.sheltertelegrambot.exeption.IncorrectDataException;
 import pro.sky.sheltertelegrambot.repository.AnimalShelterRepository;
 
 import java.util.Optional;
@@ -26,39 +25,63 @@ class ShelterServiceImplTest {
     @DisplayName("тест метода получающего String с информацией о приюте по наименованию приюта" +
             "  передаем существующее имя")
     void receiveGeneralInformation_correct() {
-        when(repository.findById("nameShelter")).thenReturn(Optional.of(SHELTER));
-        assertEquals(SHELTER.getGeneralInformation(), shelterService.receiveGeneralInformation("nameShelter"));
+        when(repository.findById(SHELTER.getNameShelter())).thenReturn(Optional.of(SHELTER));
+        assertEquals(SHELTER.getGeneralInformation(), shelterService.receiveGeneralInformation(SHELTER.getNameShelter()));
     }
 
     @Test
     @DisplayName("тест метода получающего String с информацией о приюте по наименованию приюта" +
             "  передаем несуществующее имя")
     void receiveGeneralInformation_incorrect() {
-        when(repository.findById("")).thenReturn(null);
-        assertEquals(SHELTER.getGeneralInformation(), shelterService.receiveGeneralInformation(""));
+        when(repository.findById(INCORRECT_DATA)).thenReturn(Optional.empty());
+        assertEquals(EXPECTED_MESSAGE, shelterService.receiveGeneralInformation(INCORRECT_DATA));
     }
 
     @Test
     @DisplayName("тест метода получающего String с контактной информацией о приюте по наименованию приюта" +
             "  передаем существующее имя")
     void receiveContactInformation_correct() {
-        when(repository.findById("nameShelter")).thenReturn(Optional.of(SHELTER));
-        assertEquals(SHELTER.getContactInformation(), shelterService.receiveContactInformation("nameShelter"));
+        when(repository.findById(SHELTER.getNameShelter())).thenReturn(Optional.of(SHELTER));
+        assertEquals(SHELTER.getContactInformation(), shelterService.receiveContactInformation(SHELTER.getNameShelter()));
+    }
+
+    @Test
+    @DisplayName("тест метода получающего String с контактной информацией о приюте по наименованию приюта" +
+            "  передаем не существующее имя")
+    void receiveContactInformation_incorrect() {
+        when(repository.findById(INCORRECT_DATA)).thenReturn(Optional.empty());
+        assertEquals(EXPECTED_MESSAGE, shelterService.receiveContactInformation(INCORRECT_DATA));
     }
 
     @Test
     @DisplayName("тест метода получающего String с данными охраны для оформления пропуска на машину" +
             "  передаем существующее имя")
     void receiveOrderingAPass_correct() {
-        when(repository.findById("nameShelter")).thenReturn(Optional.of(SHELTER));
-        assertEquals(SHELTER.getOrderingAPass(), shelterService.receiveOrderingAPass("nameShelter"));
+        when(repository.findById(SHELTER.getNameShelter())).thenReturn(Optional.of(SHELTER));
+        assertEquals(SHELTER.getOrderingAPass(), shelterService.receiveOrderingAPass(SHELTER.getNameShelter()));
+    }
+
+    @Test
+    @DisplayName("тест метода получающего String с данными охраны для оформления пропуска на машину" +
+            "  передаем не существующее имя")
+    void receiveOrderingAPass_incorrect() {
+        when(repository.findById(INCORRECT_DATA)).thenReturn(Optional.empty());
+        assertEquals(EXPECTED_MESSAGE, shelterService.receiveOrderingAPass(INCORRECT_DATA));
     }
 
     @Test
     @DisplayName("тест метода получающего String с общими рекомендациями о технике безопасности на территории приюта" +
             "  передаем существующее имя")
     void receiveSafetyRules_correct() {
-        when(repository.findById("nameShelter")).thenReturn(Optional.of(SHELTER));
-        assertEquals(SHELTER.getSafetyRules(), shelterService.receiveSafetyRules("nameShelter"));
+        when(repository.findById(SHELTER.getNameShelter())).thenReturn(Optional.of(SHELTER));
+        assertEquals(SHELTER.getSafetyRules(), shelterService.receiveSafetyRules(SHELTER.getNameShelter()));
+    }
+
+    @Test
+    @DisplayName("тест метода получающего String с общими рекомендациями о технике безопасности на территории приюта" +
+            "  передаем не существующее имя")
+    void receiveSafetyRules_incorrect() {
+        when(repository.findById(INCORRECT_DATA)).thenReturn(Optional.empty());
+        assertEquals(EXPECTED_MESSAGE, shelterService.receiveSafetyRules(INCORRECT_DATA));
     }
 }
