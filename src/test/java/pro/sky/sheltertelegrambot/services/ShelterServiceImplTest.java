@@ -6,7 +6,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import pro.sky.sheltertelegrambot.exeption.IncorrectDataException;
 import pro.sky.sheltertelegrambot.repository.AnimalShelterRepository;
 
 import java.util.Optional;
