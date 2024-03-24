@@ -9,6 +9,7 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import pro.sky.sheltertelegrambot.config.BotConfig;
+import pro.sky.sheltertelegrambot.entity.User;
 
 @Service
 public class TelegramBot extends TelegramLongPollingBot {
@@ -77,5 +78,10 @@ public class TelegramBot extends TelegramLongPollingBot {
         } catch (TelegramApiException e) {
             LOGGER.error("Error occurred: " + e.getMessage());
         }
+    }
+
+    public void sendMessageToUser(User user, String text, int replyToMessageId) throws TelegramApiException {
+        //задача - послать юзеру текст
+
     }
 }
