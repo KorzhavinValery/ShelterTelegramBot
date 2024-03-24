@@ -2,7 +2,7 @@ package pro.sky.sheltertelegrambot.entity;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import pro.sky.sheltertelegrambot.exсeption.IncorrectDataException;
+import pro.sky.sheltertelegrambot.exception.IncorrectDataException;
 
 import javax.persistence.*;
 
