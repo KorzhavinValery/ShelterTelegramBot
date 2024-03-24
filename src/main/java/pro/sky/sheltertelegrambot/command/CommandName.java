@@ -4,7 +4,10 @@ public enum CommandName {
     INFO_SHELTER("/info"),
     INFO_CONTACT("/contact"),
     PASS("/pass"),
-    SAFETY("/safety");
+    SAFETY("/safety"),
+    START("/start"),
+    DOG("/dog"),
+    CAT("/cat");
     private String commandName;
 
     CommandName(String commandName) {
