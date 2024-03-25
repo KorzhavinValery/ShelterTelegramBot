@@ -8,6 +8,8 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+import pro.sky.sheltertelegrambot.command.Command;
+import pro.sky.sheltertelegrambot.command.CommandService;
 import pro.sky.sheltertelegrambot.config.BotConfig;
 import pro.sky.sheltertelegrambot.entity.User;
 
@@ -15,6 +17,7 @@ import pro.sky.sheltertelegrambot.entity.User;
 public class TelegramBot extends TelegramLongPollingBot {
     private static final Logger LOGGER = LoggerFactory.getLogger(TelegramBot.class);
     private final BotConfig botConfig;
+    private CommandService command;
 
     public TelegramBot(BotConfig botConfig) {
         this.botConfig = botConfig;
@@ -43,20 +46,26 @@ public class TelegramBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         if (update.hasMessage() && update.getMessage().hasText()) {
-            String text = update.getMessage().getText();
-            long chatId = update.getMessage().getChatId();
-            String firstName = update.getMessage().getChat().getFirstName();
-            switch (text) {
-                case "/start":
-                    startCommandMessage(chatId, firstName);
-                    break;
-                case "cat":
-                    break;
-                default:
-                    sendMessage(chatId, "Извините, команда недоступна");
-            }
-        }
 
+            try {
+                execute(command.getSendMessage(update));
+            } catch (TelegramApiException e) {
+                LOGGER.error("Error occurred: " + e.getMessage());
+            }
+
+//            String text = update.getMessage().getText();
+//            long chatId = update.getMessage().getChatId();
+//            String firstName = update.getMessage().getChat().getFirstName();
+//            switch (text) {
+//                case "/start":
+//                    startCommandMessage(chatId, firstName);
+//                    break;
+//                case "cat":
+//                    break;
+//                default:
+//                    sendMessage(chatId, "Извините, команда недоступна");
+//            }
+        }
     }
     private void startCommandMessage(long chatId, String name) {
         String startMessage = "Добро пожаловать!" +'\n' + name + ", Чтобы выбрать приют для кошек введите cat, для собак dog";
