@@ -7,9 +7,18 @@ import pro.sky.sheltertelegrambot.entity.AnimalShelter;
 import pro.sky.sheltertelegrambot.services.SearchShelterByUser;
 import pro.sky.sheltertelegrambot.services.ShelterService;
 
+/**
+ * Класс выполняет команду по выводу информации для оформления пропуска на территорию приюта
+ */
 @Component
 public class CommandOrderingAPass implements Command{
     ShelterService service;
+
+    /**
+     * Метод выводит информацию для оформления пропуска на территорию приюта
+     * @param update = команда от пользователя
+     * @return = SendMessage
+     */
     @Override
     public SendMessage getSendMessage(Update update) {
         AnimalShelter animalShelter = SearchShelterByUser.findByTypeAnimal(update.getMessage().getChatId());

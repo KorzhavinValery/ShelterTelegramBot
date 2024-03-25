@@ -6,10 +6,21 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import pro.sky.sheltertelegrambot.services.ShelterService;
 import pro.sky.sheltertelegrambot.services.UserService;
 
+/**
+ * Класс выполняет команду старт
+ */
 @Component
 public class CommandStart implements Command{
-    ShelterService service;
     UserService userService;
+
+    /**
+     * Метод получает команду /start
+     * проверяет есть ли данный User в БД
+     * если есть - то предлагает выбрать тип животного
+     * если нет - сохраняет User в БД, пишет приветственное сообщение о боте и предлагает выбрать тип животного
+     * @param update = команда от пользователя
+     * @return = SendMessage
+     */
     @Override
     public SendMessage getSendMessage(Update update) {
         long id = update.getMessage().getChatId();

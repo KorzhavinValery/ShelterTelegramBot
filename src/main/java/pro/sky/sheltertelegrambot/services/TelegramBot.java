@@ -48,7 +48,7 @@ public class TelegramBot extends TelegramLongPollingBot {
         if (update.hasMessage() && update.getMessage().hasText()) {
 
             try {
-                execute(command.getSendMessage(update));
+                execute(command.getSendMessage(update)); // вызывает метод в классе CommandService
             } catch (TelegramApiException e) {
                 LOGGER.error("Error occurred: " + e.getMessage());
             }

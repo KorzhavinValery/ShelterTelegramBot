@@ -9,10 +9,19 @@ import pro.sky.sheltertelegrambot.services.UserService;
 
 import static pro.sky.sheltertelegrambot.command.TextMenu.*;
 
+/**
+ * Класс выполняет команду при выборе cat
+ */
 @Component
 public class CommandCat implements Command{
     ShelterService service;
     UserService userService;
+
+    /**
+     * Метод выводит меню один и сохраняет выбранный тип животного у User в БД
+     * @param update = команда от пользователя
+     * @return = меню с командами
+     */
     @Override
     public SendMessage getSendMessage(Update update) {
         long id = update.getMessage().getChatId();

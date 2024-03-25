@@ -1,5 +1,8 @@
 package pro.sky.sheltertelegrambot.command;
 
+/**
+ * Перечень команд
+ */
 public enum CommandName {
     INFO_SHELTER("/info"),
     INFO_CONTACT("/contact"),
