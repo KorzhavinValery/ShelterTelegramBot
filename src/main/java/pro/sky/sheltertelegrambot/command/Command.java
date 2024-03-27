@@ -7,7 +7,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
  * Интерфейс для реализации паттерна команды
  */
 public interface Command {
-    SendMessage getSendMessage(Update update);
+    String getSendMessage(long id, String firstName);
 
     String commandName();
 }

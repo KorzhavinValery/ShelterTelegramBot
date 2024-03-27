@@ -2,13 +2,11 @@ package pro.sky.sheltertelegrambot.services;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import pro.sky.sheltertelegrambot.command.Command;
 import pro.sky.sheltertelegrambot.command.CommandService;
 import pro.sky.sheltertelegrambot.config.BotConfig;
 import pro.sky.sheltertelegrambot.entity.User;
@@ -46,16 +44,10 @@ public class TelegramBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         if (update.hasMessage() && update.getMessage().hasText()) {
-
-            try {
-                execute(command.getSendMessage(update)); // вызывает метод в классе CommandService
-            } catch (TelegramApiException e) {
-                LOGGER.error("Error occurred: " + e.getMessage());
-            }
-
-//            String text = update.getMessage().getText();
-//            long chatId = update.getMessage().getChatId();
-//            String firstName = update.getMessage().getChat().getFirstName();
+            String text = update.getMessage().getText();
+            long chatId = update.getMessage().getChatId();
+            String firstName = update.getMessage().getChat().getFirstName();
+            sendMessage(chatId, command.getMessage(chatId, text, firstName));
 //            switch (text) {
 //                case "/start":
 //                    startCommandMessage(chatId, firstName);

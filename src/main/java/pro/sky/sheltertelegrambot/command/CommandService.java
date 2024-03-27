@@ -1,9 +1,6 @@
 package pro.sky.sheltertelegrambot.command;
 
-import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.util.List;
 import java.util.Map;
@@ -29,10 +26,11 @@ public class CommandService {
     /**
      * Метод ищет в Мар необходимый класс по поступившей от пользователя команде
      * и реализует в найденном классе метод getSendMessage()
-     * @param update = команда от пользователя
+     * @param id = id User
+     * @param command = команда от пользователя
      * @return = SendMessage
      */
-    public SendMessage getSendMessage(Update update) {
-        return commandMap.get(update.getMessage().getText()).getSendMessage(update);
+    public String getMessage(long id, String command, String firstName) {
+        return commandMap.get(command).getSendMessage(id, firstName);
     }
 }

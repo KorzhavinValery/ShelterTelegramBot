@@ -16,15 +16,13 @@ public class CommandOrderingAPass implements Command{
 
     /**
      * Метод выводит информацию для оформления пропуска на территорию приюта
-     * @param update = команда от пользователя
-     * @return = SendMessage
+     * @param id = id User
+     * @return = String
      */
     @Override
-    public SendMessage getSendMessage(Update update) {
-        AnimalShelter animalShelter = SearchShelterByUser.findByTypeAnimal(update.getMessage().getChatId());
-        long id = update.getMessage().getChatId();
-        String text = service.receiveOrderingAPass(animalShelter.getNameShelter());
-        return new SendMessage(String.valueOf(id), text);
+    public String getSendMessage(long id, String firstName) {
+        AnimalShelter animalShelter = SearchShelterByUser.findByTypeAnimal(id);
+        return service.receiveOrderingAPass(animalShelter.getNameShelter());
     }
 
     @Override

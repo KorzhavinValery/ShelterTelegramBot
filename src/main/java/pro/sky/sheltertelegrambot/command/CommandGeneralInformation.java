@@ -16,15 +16,13 @@ public class CommandGeneralInformation implements Command{
 
     /**
      * Метод выводит общую информацию о приюте
-     * @param update = команда от пользователя
-     * @return = SendMessage
+     * @param id = id User
+     * @return = String
      */
     @Override
-    public SendMessage getSendMessage(Update update) {
-        AnimalShelter animalShelter = SearchShelterByUser.findByTypeAnimal(update.getMessage().getChatId());
-        long id = update.getMessage().getChatId();
-        String text = service.receiveGeneralInformation(animalShelter.getNameShelter());
-        return new SendMessage(String.valueOf(id), text);
+    public String getSendMessage(long id, String firstName) {
+        AnimalShelter animalShelter = SearchShelterByUser.findByTypeAnimal(id);
+        return service.receiveGeneralInformation(animalShelter.getNameShelter());
     }
 
     @Override

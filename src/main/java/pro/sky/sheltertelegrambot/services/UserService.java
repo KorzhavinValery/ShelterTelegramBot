@@ -27,10 +27,8 @@ public class UserService {
     /**
      * Метод для сохранения User в БД
      */
-    public void saveUser(Update update) {
-        long id = update.getMessage().getChatId();
-        String name = update.getMessage().getChat().getFirstName();
-        userRepository.save(new User(id, name));
+    public void saveUser(long id, String firstName) {
+        userRepository.save(new User(id, firstName));
     }
 
     /**

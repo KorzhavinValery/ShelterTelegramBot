@@ -19,14 +19,13 @@ public class CommandDog implements Command {
 
     /**
      * Метод выводит меню один и сохраняет выбранный тип животного у User в БД
-     * @param update = команда от пользователя
+     * @param id = id User
      * @return = меню с командами
      */
     @Override
-    public SendMessage getSendMessage(Update update) {
-        long id = update.getMessage().getChatId();
+    public String getSendMessage(long id, String firstName) {
         userService.updateUser(id, TypeAnimal.DOG);
-        return new SendMessage(String.valueOf(id), TEXT_MENU_ONE);
+        return TEXT_MENU_ONE;
     }
 
     @Override

@@ -18,24 +18,22 @@ public class CommandStart implements Command{
      * проверяет есть ли данный User в БД
      * если есть - то предлагает выбрать тип животного
      * если нет - сохраняет User в БД, пишет приветственное сообщение о боте и предлагает выбрать тип животного
-     * @param update = команда от пользователя
-     * @return = SendMessage
+     * @param id = id User
+     * @return = String
      */
     @Override
-    public SendMessage getSendMessage(Update update) {
-        long id = update.getMessage().getChatId();
+    public String getSendMessage(long id, String firstName) {
         if (userService.checkUser(id)) { // проверяем есть ли User в БД
-            String text = "Добро пожаловать!" + '\n'
-                    + update.getMessage().getChat().getFirstName()
+            return  "Добро пожаловать!" + '\n'
+                    + firstName
                     + ", Чтобы выбрать приют для кошек введите cat, для собак dog";
-            return new SendMessage(String.valueOf(id), text);
         }else {
             String text = "Добро пожаловать!" + '\n'
-                    + update.getMessage().getChat().getFirstName() + '\n'
+                    + firstName + '\n'
                     + "Данный бот поможет вам найти своего питомца! И ответит на интересующие вас вопросы" + '\n'
                     + "Чтобы выбрать приют для кошек введите /cat, для собак /dog";
-            userService.saveUser(update); // сохраняем User в БД
-            return new SendMessage(String.valueOf(id), text);
+            userService.saveUser(id, firstName); // сохраняем User в БД
+            return text;
         }
     }
 
